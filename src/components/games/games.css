@@ -1,0 +1,21 @@
+#games {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 80px 200px 80px;
+  font-size: 1rem;
+  text-align: center;
+  align-items: center;
+}
+
+button {
+  height: 60px;
+  width: 50%;
+  font-size: x-large;
+}
+
+@media only screen and (max-width: 750px) {
+  button {
+    width: 200px;
+}
+}

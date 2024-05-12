@@ -1,0 +1,17 @@
+.footer-items {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.footer-items ul {
+  padding: 0;
+}
+
+.copyright {
+  background-color: var(--color-black);
+  color: white;
+  text-align: center;
+  margin: 0 !important;
+  padding: 0.5rem;
+}

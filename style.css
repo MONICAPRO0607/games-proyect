@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Comfortaa:wght@300;400;700&family=Poppins:wght@300&family=Qwitcher+Grypen&display=swap');
+
+:root {
+  --background-color-primary: #f2e2d2;
+  --background-color-secondary: rgb(253, 253, 200);
+  --color-black: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comfortaa';
+  scroll-behavior: smooth;
+}
