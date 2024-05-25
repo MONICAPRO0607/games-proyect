@@ -8,24 +8,53 @@ export const trivialGame = () => {
   // Array de preguntas y respuestas
   let questions = [
     {
-      question: '¿Cuál es la capital de Francia?',
-      options: ['Madrid', 'París', 'Londres', 'Roma'],
-      answer: 'París'
+      question: '¿Cuál de las siguientes opciones sobre la lengua de signos es correcta?',
+      options: ['Existe una lengua de signos universal', 'Es una comunicación basada en la mímica', 'Es un código gestual sin estructura concreta', 'Existen 26 gestos distintos que representan letras'],
+      answer: 'Existen 26 gestos distintos que representan letras'
     },
     {
-      question: '¿Cuántos planetas tiene nuestro sistema solar?',
-      options: ['6', '8', '10', '12'],
-      answer: '8'
+      question: '¿Qué característica distingue a la lengua de signos de los gestos cotidianos?',
+      options: ['Se utiliza sólo con la mano dominante', 'Es internacional y comprendida por todos', 'Tiene una gramática y estructura lingüística propia', 'Se basa únicamente en expresiones faciales'],
+      answer: 'Tiene una gramática y estructura lingüística propia'
     },
     {
-      question: "¿Qué animal es conocido como el 'Rey de la selva'?",
-      options: ['Elefante', 'León', 'Tigre', 'Jirafa'],
-      answer: 'León'
+      question: "¿Qué papel juega la expresión facial en la lengua de signos?",
+      options: ['No tiene importancia', 'Es crucial para transmitir significado', 'Es opcional', 'Se utiliza sólo en situaciones formales'],
+      answer: 'Es crucial para transmitir significado'
     },
     {
-      question: '¿Cuál es el río más largo del mundo?',
-      options: ['Nilo', 'Amazonas', 'Misisipi', 'Yangtsé'],
-      answer: 'Amazonas'
+      question: '¿Cuál es una de las principales ventajas de la lengua de signos?',
+      options: ['No requiere aprender gramática', 'Es universal en todos los países', 'No tiene reglas específicas', 'Facilita la comunicación entre personas sordas y oyentes'],
+      answer: 'Facilita la comunicación entre personas sordas y oyentes'
+    },
+    {
+      question: '¿Qué se utiliza para deletrear palabras específicas en la lengua de signos?',
+      options: ['Números', 'Gestos', 'Lengua', 'Alfabeto dactilológico'],
+      answer: 'Alfabeto dactilológico'
+    },
+    {
+      question: '¿Cuál es uno de los desafíos comunes al aprender la lengua de signos?',
+      options: ['Aprender a que no es sustituir palabra por signo', 'Falta de expresión facial', 'Formar oraciones gramaticalmente correctas', 'la cultura del colectivo de las personas con sordera'],
+      answer: 'Aprender a que no es sustituir palabra por signo'
+    },
+    {
+      question: '¿Cuál es una de las ventajas de la lengua de signos sobre la comunicación oral en entornos ruidosos?',
+      options: ['No requiere concentración', 'Es más fácil de entender en situaciones ruidosas', 'Es más lenta que la comunicación oral', ' No puede ser utilizada en entornos ruidosos'],
+      answer: 'Es más fácil de entender en situaciones ruidosas'
+    },   {
+      question: '¿Cuál de las siguientes opciones describe mejor la relación entre la lengua de signos y la cultura sorda?',
+      options: ['La lengua de signos es independiente de la cultura sorda', 'La cultura sorda no tiene influencia en la lengua de signos', 'La lengua de signos es solo una herramienta de comunicación, no relacionada con la cultura', 'La lengua de signos y la cultura sorda están intrínsecamente vinculadas'],
+      answer: 'La lengua de signos y la cultura sorda están intrínsecamente vinculadas'
+    },
+    {
+      question: '¿Qué se utiliza para enfatizar palabras o frases en la lengua de signos?',
+      options: ['Silencio total', 'Movimientos de cadera', 'Elevación de cejas', 'Parpadero rápido'],
+      answer: 'Elevación de cejas'
+    },
+    {
+      question: '¿Cuál es una de las características principales de la lengua de signos que la distingue de la mímica?',
+      options: ['Uso exclusivo de expresiones faciales', 'Uso de gramática y estructura lingüística', 'Uso de palabras habladas simultáneamente', 'Uso de gestos exagerados'],
+      answer: 'Uso de gramática y estructura lingüística'
     }
   ]
 

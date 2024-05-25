@@ -59,6 +59,10 @@ button {
   color: green;
 }
 
+.incorrect-letter {
+  color: red;
+}
+
 @media screen and (max-width: 749px) {
   .word {
     flex-wrap: wrap;

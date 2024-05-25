@@ -32,7 +32,18 @@ const alphabet = [
 ]
 
 // Array de palabras posibles
-const words = ['caballo', 'Mara', 'Monica', 'javascript', 'vite', 'queso']
+const words = [
+  'signar',
+  'aprender',
+  'divertido',
+  'javascript',
+  'fiesta',
+  'lengua',
+  'manos',
+  'desarrollo',
+  'integrar',
+  'sorprender'
+]
 
 // Función para obtener una palabra aleatoria del array
 const getRandomWord = () => {
@@ -44,21 +55,29 @@ const getRandomWord = () => {
 const createFindGame = (container) => {
   container.innerHTML = '' // Limpia el contenedor
 
-  // Se selecciona una palabra aleatoria del array
+  // Selecciona una palabra aleatoria del array
   const wordToGuess = getRandomWord()
 
-  // Se crean los huecos de cada letra de la palabra
+  // Crea los huecos de cada letra de la palabra
   const blankSpaces = wordToGuess.split('').map(() => '_')
 
-  // Se crea el elemento de palabra y se agrega al contenedor
+  // Crea el elemento de palabra y lo agrega al contenedor
   const wordElement = document.createElement('div')
   wordElement.className = 'word'
   container.appendChild(wordElement)
 
-  // Se crea el elemento de mensaje y se agrega al contenedor
+  // Crea el elemento de mensaje y lo agrega al contenedor
   const messageElement = document.createElement('div')
   messageElement.className = 'message'
   container.appendChild(messageElement)
+
+  // Crea el elemento para mostrar la letra incorrecta
+  const incorrectLetterElement = document.createElement('div')
+  incorrectLetterElement.className = 'incorrect-letter'
+  container.appendChild(incorrectLetterElement)
+
+  // Almacena las letras incorrectas
+  const incorrectLetters = []
 
   // Función para actualizar el contenido de la palabra con imágenes
   const updateWordDisplay = () => {
@@ -79,7 +98,7 @@ const createFindGame = (container) => {
           img.alt = letterData.name
           letterElement.appendChild(img)
 
-          // Añadir la letra debajo de la imagen
+          // Añade la letra debajo de la imagen
           const letterText = document.createElement('div')
           letterText.className = 'letter-text'
           letterText.textContent = letter
@@ -91,10 +110,10 @@ const createFindGame = (container) => {
     })
   }
 
-  // Inicializar la visualización de la palabra
+  // Inicializa la visualización de la palabra
   updateWordDisplay()
 
-  // Se crea el input para que la persona usuaria introduzca la palabra
+  // Crea el input para que el usuario introduzca la palabra
   const inputField = document.createElement('input')
   inputField.type = 'text'
   inputField.placeholder = 'Guess a letter'
@@ -106,9 +125,20 @@ const createFindGame = (container) => {
     return !blankSpaces.includes('_')
   }
 
-  // Se verifica si es correcto
+  // Verifica si es correcto
   inputField.addEventListener('input', () => {
     const userInput = inputField.value.toLowerCase()
+
+    // Si la letra ingresada no está en la palabra y no está en las letras incorrectas
+    if (
+      userInput &&
+      !wordToGuess.includes(userInput) &&
+      !incorrectLetters.includes(userInput)
+    ) {
+      incorrectLetters.push(userInput)
+      incorrectLetterElement.textContent = incorrectLetters.join(' ')
+      inputField.value = ''
+    }
 
     if (userInput && wordToGuess.includes(userInput)) {
       wordToGuess.split('').forEach((letter, index) => {
@@ -120,7 +150,7 @@ const createFindGame = (container) => {
       updateWordDisplay()
 
       if (isWordComplete()) {
-        // Deshabilitar el input cuando la palabra esté completa
+        // Deshabilita el input cuando la palabra esté completa
         inputField.disabled = true
         messageElement.textContent = '¡Bien hecho!'
       }
@@ -129,7 +159,7 @@ const createFindGame = (container) => {
     inputField.value = '' // Limpia el campo de entrada
   })
 
-  // Crear un botón para pasar a la siguiente palabra
+  // Crea un botón para pasar a la siguiente palabra
   const nextButton = document.createElement('button')
   nextButton.textContent = 'Next Word'
   container.appendChild(nextButton)
@@ -139,9 +169,9 @@ const createFindGame = (container) => {
   })
 }
 
-// Inicializar el juego
+// Inicializa el juego
 export const findGame = () => {
-  // Se toma el contenedor con ID "find-game"
+  // Toma el contenedor con ID "find-game"
   const hangmanGameContainer = document.getElementById('find-game')
 
   // Verifica si el contenedor existe

@@ -16,8 +16,7 @@ import './about.css'
  comunidades lingüísticas, con independencia de las lenguas orales. La
  lengua de signos facilita el aprendizaje en general, así como el
  acceso a la lengua oral además de propiciar la participación e
- inclusión social. La lengua de signos suma y aquí puedes empezar a
- conocerla y practicarla. Aprendiendo lengua de signos, amplías tu
+ inclusión social. No todas las personas sordas utilizan la lengua de signos para comunicarse, pues muchas aprenden a hablar y tienen restos auditivos para oir, a veces con apoyo de ayudas técnicas. La lengua de signos suma y aquí puedes empezar a conocerla y practicarla. Aprendiendo lengua de signos, amplías tu
  forma de ver, entender y pensar el mundo.`;
 
  aboutUsSection.appendChild(aboutUsParagraph);
