@@ -1,0 +1,76 @@
+/* Estilo para el contenedor del juego */
+#trivial-game {
+  width: 100%;
+}
+
+/* Estilo para las preguntas */
+
+.questionParagraph {
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+.question {
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Estilo para el grid de opciones */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+/* Estilo para cada opción */
+.option {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Estilo para las opciones cuando se coloca el cursor sobre ellas */
+.option:hover {
+  background-color: #e0e0e0;
+}
+
+/* Estilo para las respuestas correctas */
+.option.correct {
+  background-color: #a8e6cf;
+}
+
+/* Estilo para las respuestas incorrectas */
+.option.incorrect {
+  background-color: #f7cac9;
+}
+
+/* Deshabilitar clic en las opciones hermanas de una respuesta correcta */
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.game-over {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px 0;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#trivial-game.finished {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}

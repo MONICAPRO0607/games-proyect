@@ -1,0 +1,88 @@
+/* memory.css */
+#memory-game {
+  display: grid;
+  grid-template-columns: repeat(4, 100px); /* 4 columnas de 100px de ancho */
+  grid-template-rows: repeat(4, 1fr); /* 4 filas de igual tamaño */
+  justify-content: center; /* Centrar el contenido horizontalmente */
+  gap: 10px; /* Espacio entre las celdas del grid */
+}
+.memory-card {
+  width: 100px;
+  height: 150px;
+  margin: 10px;
+  perspective: 1000px;
+}
+
+.memory-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  transform: rotateY(180deg);
+  background-image: url('../../../../public/assets/confetti-doodles.png');
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el área */
+  background-position: center; /* Centra la imagen dentro del contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  border-radius: 6px;
+}
+
+.memory-card-inner.flip {
+  transform: rotateY(180deg);
+}
+
+.memory-card-front,
+.memory-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.memory-card-front {
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #333;
+}
+
+.memory-card-back {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+.memory-card img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.memory-card.flipped .memory-card-inner {
+  transform: rotateY(0deg);
+}
+
+#memory-game-header {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 749px) {
+  #memory-game {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .memory-card {
+    width: 90px;
+    height: 150px;
+    margin: 0px;
+    perspective: 1000px;
+  }
+}

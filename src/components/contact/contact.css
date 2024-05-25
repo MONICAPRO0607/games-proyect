@@ -8,6 +8,7 @@ h2 {
   justify-content: space-around;
   margin: 30px;
   gap: 30px;
+  max-width: 100%;
 }
 
 .rellenable .contact {
@@ -36,8 +37,17 @@ input {
     align-items: center;
     text-align: center;
     margin: 5px;
-}
- 
+  }
+
+  .rellenable form {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .rellenable .contact {
+    width: 100%;
+  }
+
   #contactSection {
     width: 100%;
     display: flex;
@@ -45,5 +55,5 @@ input {
     align-items: center;
     text-align: center;
     justify-content: center;
-}
+  }
 }

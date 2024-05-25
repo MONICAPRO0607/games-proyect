@@ -10,6 +10,11 @@ header {
   gap: 50px;
 }
 
+header .links a {
+  color: #4620ee;
+  text-decoration: none;
+}
+
 li {
   list-style: none;
 }
@@ -62,6 +67,3 @@ a {
     gap: 3px;
   }
 }
-
-
-

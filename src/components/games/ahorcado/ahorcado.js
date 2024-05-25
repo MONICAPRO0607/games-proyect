@@ -1,1 +1,0 @@
-import './ahorcado.css'
