@@ -59,6 +59,7 @@ export const header = () => {
     }
   })
 
+
   // Se agregan los elementos al encabezado
   document.body.insertBefore(header, document.body.firstChild)
   header.appendChild(logo)

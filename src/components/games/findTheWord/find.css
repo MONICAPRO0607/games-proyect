@@ -61,6 +61,7 @@ button {
 
 .incorrect-letter {
   color: red;
+  min-height: 20px;
 }
 
 @media screen and (max-width: 749px) {

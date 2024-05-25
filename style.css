@@ -13,3 +13,7 @@
   font-family: 'Comfortaa';
   scroll-behavior: smooth;
 }
+
+.hidden {
+  display: none !important;
+}

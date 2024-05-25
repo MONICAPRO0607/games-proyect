@@ -21,20 +21,20 @@ export const games = () => {
   memoryButton.id = 'memory-game-button'
   const memoryHeader = document.createElement('div')
   memoryHeader.id = 'memory-game-header'
+  memoryHeader.classList.add('hidden')
   const memoryGame = document.createElement('section')
   memoryGame.id = 'memory-game'
-  main.appendChild(memoryHeader)
-  main.appendChild(memoryGame)
-  MemoryGame()
+  memoryGame.classList.add('hidden')
+  
 
   const foundButton = document.createElement('button')
-  foundButton.textContent = 'A leer la palabra'
+  foundButton.textContent = 'Encuentra la palabra'
   foundButton.classList.add('found-button')
   foundButton.id = 'hangman-game'
   const findGame = document.createElement('section')
   findGame.id = 'find-game'
-  main.appendChild(findGame)
-  FindGame()
+  findGame.classList.add('hidden')
+  
 
   const trivialButton = document.createElement('button')
   trivialButton.textContent = 'Trivial'
@@ -42,13 +42,40 @@ export const games = () => {
   trivialButton.id = 'trivial-game-button'
   const trivialGame = document.createElement('section')
   trivialGame.id = 'trivial-game'
-  main.appendChild(trivialGame)
-  TrivialGame()
+  trivialGame.classList.add('hidden')
+
+
+  memoryButton.addEventListener('click', function () {
+    memoryHeader.classList.remove('hidden')
+    memoryGame.classList.remove('hidden')
+    trivialGame.classList.add('hidden')
+    findGame.classList.add('hidden')
+  })
+  foundButton.addEventListener('click', function () {
+    findGame.classList.remove('hidden')
+    memoryHeader.classList.add('hidden')
+    memoryGame.classList.add('hidden')
+    trivialGame.classList.add('hidden')
+  })
+  trivialButton.addEventListener('click', function () {
+    trivialGame.classList.remove('hidden')
+    memoryHeader.classList.add('hidden')
+    memoryGame.classList.add('hidden')
+    findGame.classList.add('hidden')
+  })
 
   main.appendChild(games)
   games.appendChild(memoryButton)
   games.appendChild(foundButton)
   games.appendChild(trivialButton)
+  main.appendChild(memoryHeader)
+  main.appendChild(memoryGame)
+  main.appendChild(findGame)
+  main.appendChild(trivialGame)
+
+  MemoryGame()
+  FindGame()
+  TrivialGame()
 }
 
 // Exportación de la caja games para usarla en el main.js
