@@ -1,5 +1,3 @@
-import './about.css'
-
  // Crear la sección "about-us"
  export const about = () => {
  const aboutUsSection = document.createElement('section');
