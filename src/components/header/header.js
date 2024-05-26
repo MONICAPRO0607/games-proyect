@@ -3,23 +3,23 @@ import './header.css'
 // Creación de la caja header
 export const header = () => {
   // Se crea el elemento header
-  const headerElement = document.createElement('header')
-  headerElement.id = 'header'; // Corregir el id
+  const headerElement = document.createElement('header') 
+  headerElement.id = 'header'
 
-  // Se crea un elemento <img> para el logo
+  // Se crea un elemento imagen para el logo y se le da clase
   const logo = document.createElement('img')
   logo.src = '/assets/manoscolores.png'
   logo.alt = 'logo'
-  logo.classList.add('logo') // Se agrega la clase 'logo' al elemento
+  logo.classList.add('logo')
 
-  // Se crea un botón para el menú
+  // Se crea un botón para el menú y se le da clase
   const menuButton = document.createElement('button')
-  menuButton.textContent = '\u2630 Menu' // Unicode para el ícono de menú
-  menuButton.classList.add('menu-button') // Se agrega la clase 'menu-button' al elemento
+  menuButton.textContent = '\u2630 Menu'
+  menuButton.classList.add('menu-button')
 
-  // Se crea una lista desordenada para los enlaces
+  // Se crea una lista para los enlaces
   const linksList = document.createElement('ul')
-  linksList.classList.add('links') // Se agrega la clase 'links' a la lista
+  linksList.classList.add('links')
 
   // Se crean los elementos de la lista y se agregan los enlaces
   const linkItems = [
@@ -38,36 +38,44 @@ export const header = () => {
     linksList.appendChild(listItem)
   })
 
-  // Scroll suave al hacer clic en los enlaces del header
+    // Se realizan los eventos
+  menuButton.addEventListener('click', function() {
+    linksList.classList.toggle('active')
+  })
+
+  linksList.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      linksList.classList.remove('active')
+    })
+  })
+
+  // El scroll suave al hacer click en los enlaces
   document.addEventListener('click', (event) => {
     const clickedElement = event.target
-    // Verificar si el clic se realizó en un enlace dentro del header
     if (clickedElement.matches('header a')) {
-      event.preventDefault() // Prevenir el comportamiento predeterminado del enlace
+      event.preventDefault()
       const targetSelector = clickedElement.getAttribute('href')
       let targetElement
-      // Verificar si el href es un ID
       if (targetSelector.startsWith('#')) {
         const targetId = targetSelector.substring(1)
         targetElement = document.getElementById(targetId)
       } else {
-        // Si no es un ID, asumimos que es una clase
         targetElement = document.querySelector(targetSelector)
       }
-      // Verificar si se encontró un elemento objetivo
       if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth' });
+        targetElement.scrollIntoView({ behavior: 'smooth' })
       }
     }
-  });
+  })
+
   // Se agregan los elementos al encabezado
   headerElement.appendChild(logo)
   headerElement.appendChild(menuButton)
   headerElement.appendChild(linksList)
   document.body.insertBefore(headerElement, document.body.firstChild)
-};
+}
 
-// Exportación de la caja header para usarla en el main.js
+// Se exporta la caja para usarla en el main.js
 export const Header = () => {
   return header()
 }

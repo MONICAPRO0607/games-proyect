@@ -16,7 +16,7 @@ export const contact = () => {
      responderemos lo más pronto posible.
    </p>
 
-   <form action="">
+   <form id="contactForm" action="">
      <div class="input-field">
        <label for="name">Nombre</label>
        <input type="text" name="name" />
@@ -31,12 +31,17 @@ export const contact = () => {
        <label for="message">Mensaje</label>
        <textarea name="message" rows="5" cols="50"></textarea>
      </div>
+
+     <div class="input-field">
+          <button type="submit">Enviar</button>
+      </div>
    </form>
  </div>`
 
 // Se agregan los elementos del contact al body
 document.body.appendChild(contactSection);
 }
+
 
 // Exportación de la caja contact para usarla en el main.js
 export const Contact = () => {
