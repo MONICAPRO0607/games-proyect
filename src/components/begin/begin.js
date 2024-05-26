@@ -9,7 +9,7 @@ export const begin = () => { // Crear la sección "home"
 
  // Crear la imagen de fondo de la sección "home"
  const homeImg = document.createElement('img');
- homeImg.src = '/hero.jpg';
+ homeImg.src = '/assets/hero.jpg';
  homeImg.alt = 'campo';
  homeSection.appendChild(homeImg);
 
