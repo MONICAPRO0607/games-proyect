@@ -15,111 +15,111 @@ export const cards = () => {
   const cardsList = [
     {
       name: 'a',
-      image: './public/assets/a.png'
+      image: '/a.png'
     },
     {
       name: 'b',
-      image: './public/assets/b.png'
+      image: '/b.png'
     },
     {
       name: 'c',
-      image: './public/assets/c.png'
+      image: '/c.png'
     },
     {
       name: 'd',
-      image: './public/assets/d.png'
+      image: '/d.png'
     },
     {
       name: 'e',
-      image: './public/assets/e.png'
+      image: '/e.png'
     },
     {
       name: 'f',
-      image: './public/assets/f.png'
+      image: '/f.png'
     },
     {
       name: 'g',
-      image: './public/assets/g.png'
+      image: '/g.png'
     },
     {
       name: 'h',
-      image: './public/assets/h.png'
+      image: '/h.png'
     },
     {
       name: 'i',
-      image: './public/assets/i.jpg'
+      image: '/i.jpg'
     },
     {
       name: 'j',
-      image: './public/assets/j.png'
+      image: '/j.png'
     },
     {
       name: 'k',
-      image: './public/assets/k.png'
+      image: '/k.png'
     },
     {
       name: 'l',
-      image: './public/assets/l.jpg'
+      image: '/l.jpg'
     },
     {
       name: 'm',
-      image: './public/assets/m.png'
+      image: '/m.png'
     },
     {
       name: 'n',
-      image: './public/assets/n.jpg'
+      image: '/n.jpg'
     },
     {
       name: 'ñ',
-      image: './public/assets/ñ.png'
+      image: '/ñ.png'
     },
     {
       name: 'o',
-      image: './public/assets/o.jpg'
+      image: '/o.jpg'
     },
     {
       name: 'p',
-      image: './public/assets/p.png'
+      image: '/p.png'
     },
     {
       name: 'q',
-      image: './public/assets/q.png'
+      image: '/q.png'
     },
     {
       name: 'r',
-      image: './public/assets/r.png'
+      image: '/r.png'
     },
     {
       name: 's',
-      image: './public/assets/s.png'
+      image: '/s.png'
     },
     {
       name: 't',
-      image: './public/assets/t.png'
+      image: '/t.png'
     },
     {
       name: 'u',
-      image: './public/assets/u.png'
+      image: '/u.png'
     },
     {
       name: 'v',
-      image: './public/assets/v.png'
+      image: '/v.png'
     },
     {
       name: 'w',
-      image: './public/assets/w.png'
+      image: '/w.png'
     },
     {
       name: 'x',
-      image: './public/assets/x.png'
+      image: '/x.png'
     },
     {
       name: 'y',
-      image: './public/assets/y.jpg'
+      image: '/y.jpg'
     },
     {
       name: 'z',
-      image: './public/assets/z.png'
+      image: '/z.png'
     }
   ]
 
