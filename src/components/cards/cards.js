@@ -15,111 +15,111 @@ export const cards = () => {
   const cardsList = [
     {
       name: 'a',
-      image: '/a.png'
+      image: '/assets/a.png'
     },
     {
       name: 'b',
-      image: '/b.png'
+      image: '/assets/b.png'
     },
     {
       name: 'c',
-      image: '/c.png'
+      image: '/assets/c.png'
     },
     {
       name: 'd',
-      image: '/d.png'
+      image: '/assets/d.png'
     },
     {
       name: 'e',
-      image: '/e.png'
+      image: '/assets/e.png'
     },
     {
       name: 'f',
-      image: '/f.png'
+      image: '/assets/f.png'
     },
     {
       name: 'g',
-      image: '/g.png'
+      image: '/assets/g.png'
     },
     {
       name: 'h',
-      image: '/h.png'
+      image: '/assets/h.png'
     },
     {
       name: 'i',
-      image: '/i.jpg'
+      image: '/assets/i.jpg'
     },
     {
       name: 'j',
-      image: '/j.png'
+      image: '/assets/j.png'
     },
     {
       name: 'k',
-      image: '/k.png'
+      image: '/assets/k.png'
     },
     {
       name: 'l',
-      image: '/l.jpg'
+      image: '/assets/l.jpg'
     },
     {
       name: 'm',
-      image: '/m.png'
+      image: '/assets/m.png'
     },
     {
       name: 'n',
-      image: '/n.jpg'
+      image: '/assets/n.jpg'
     },
     {
       name: 'ñ',
-      image: '/ñ.png'
+      image: '/assets/ñ.png'
     },
     {
       name: 'o',
-      image: '/o.jpg'
+      image: '/assets/o.jpg'
     },
     {
       name: 'p',
-      image: '/p.png'
+      image: '/assets/p.png'
     },
     {
       name: 'q',
-      image: '/q.png'
+      image: '/assets/q.png'
     },
     {
       name: 'r',
-      image: '/r.png'
+      image: '/assets/r.png'
     },
     {
       name: 's',
-      image: '/s.png'
+      image: '/assets/s.png'
     },
     {
       name: 't',
-      image: '/t.png'
+      image: '/assets/t.png'
     },
     {
       name: 'u',
-      image: '/u.png'
+      image: '/assets/u.png'
     },
     {
       name: 'v',
-      image: '/v.png'
+      image: '/assets/v.png'
     },
     {
       name: 'w',
-      image: '/w.png'
+      image: '/assets/w.png'
     },
     {
       name: 'x',
-      image: '/x.png'
+      image: '/assets/x.png'
     },
     {
       name: 'y',
-      image: '/y.jpg'
+      image: '/assets/y.jpg'
     },
     {
       name: 'z',
-      image: '/z.png'
+      image: '/assets/z.png'
     }
   ]
 

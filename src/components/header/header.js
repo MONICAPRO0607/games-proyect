@@ -8,7 +8,7 @@ export const header = () => {
 
   // Se crea un elemento <img> para el logo
   const logo = document.createElement('img')
-  logo.src = '/manoscolores.png'
+  logo.src = '/assets/manoscolores.png'
   logo.alt = 'logo'
   logo.classList.add('logo') // Se agrega la clase 'logo' al elemento
 
