@@ -89,6 +89,7 @@ export const memoryGame = () => {
   // Crear botón de reseteo
   const resetButton = document.createElement('button')
   resetButton.textContent = 'Iniciar Juego'
+  resetButton.id = "resetButton"
   resetButton.addEventListener('click', createNewGame)
   const memoryGameHeader = document.getElementById('memory-game-header')
   memoryGameHeader.appendChild(resetButton)

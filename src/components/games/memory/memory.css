@@ -63,6 +63,10 @@
   transform: rotateY(0deg);
 }
 
+#resetButton {
+  height: 40px;
+}
+
 #memory-game-header {
   display: flex;
   justify-content: center;
