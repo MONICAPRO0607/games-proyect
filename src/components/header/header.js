@@ -3,7 +3,8 @@ import './header.css'
 // Creación de la caja header
 export const header = () => {
   // Se crea el elemento header
-  const header = document.createElement('header')
+  const headerElement = document.createElement('header')
+  headerElement.id = 'header'; // Corregir el id
 
   // Se crea un elemento <img> para el logo
   const logo = document.createElement('img')
@@ -20,7 +21,7 @@ export const header = () => {
   const linksList = document.createElement('ul')
   linksList.classList.add('links') // Se agrega la clase 'links' a la lista
 
-  // Se crea los elementos de la lista y se agregan los enlaces
+  // Se crean los elementos de la lista y se agregan los enlaces
   const linkItems = [
     { text: 'Sobre nosotros', href: '#about-us' },
     { text: 'Letras', href: '#cards' },
@@ -37,6 +38,7 @@ export const header = () => {
     linksList.appendChild(listItem)
   })
 
+  // Scroll suave al hacer clic en los enlaces del header
   document.addEventListener('click', (event) => {
     const clickedElement = event.target
     // Verificar si el clic se realizó en un enlace dentro del header
@@ -54,18 +56,16 @@ export const header = () => {
       }
       // Verificar si se encontró un elemento objetivo
       if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth' })
+        targetElement.scrollIntoView({ behavior: 'smooth' });
       }
     }
-  })
-
-
+  });
   // Se agregan los elementos al encabezado
-  document.body.insertBefore(header, document.body.firstChild)
-  header.appendChild(logo)
-  header.appendChild(menuButton)
-  header.appendChild(linksList)
-}
+  headerElement.appendChild(logo)
+  headerElement.appendChild(menuButton)
+  headerElement.appendChild(linksList)
+  document.body.insertBefore(headerElement, document.body.firstChild)
+};
 
 // Exportación de la caja header para usarla en el main.js
 export const Header = () => {

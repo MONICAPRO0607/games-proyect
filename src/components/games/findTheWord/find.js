@@ -48,35 +48,35 @@ const words = [
 // Función para obtener una palabra aleatoria del array
 const getRandomWord = () => {
   const randomIndex = Math.floor(Math.random() * words.length)
-  return words[randomIndex].toLowerCase() // Asegurarse de que la palabra esté en minúsculas
+  return words[randomIndex].toLowerCase() // Poner siempre la palabra en minúsculas
 }
 
 // Función principal para crear el juego
 const createFindGame = (container) => {
   container.innerHTML = '' // Limpia el contenedor
 
-  // Selecciona una palabra aleatoria del array
+  // Seleccionar una palabra aleatoria del array
   const wordToGuess = getRandomWord()
 
-  // Crea los huecos de cada letra de la palabra
+  // Crear los huecos de cada letra de la palabra
   const blankSpaces = wordToGuess.split('').map(() => '_')
 
-  // Crea el elemento de palabra y lo agrega al contenedor
+  // Crear el elemento de palabra y agregarlo al contenedor
   const wordElement = document.createElement('div')
   wordElement.className = 'word'
   container.appendChild(wordElement)
 
-  // Crea el elemento de mensaje y lo agrega al contenedor
+  // Crear el elemento de mensaje y agregarlo al contenedor
   const messageElement = document.createElement('div')
   messageElement.className = 'message'
   container.appendChild(messageElement)
 
-  // Crea el elemento para mostrar la letra incorrecta
+  // Crear el elemento para mostrar la letra incorrecta
   const incorrectLetterElement = document.createElement('div')
   incorrectLetterElement.className = 'incorrect-letter'
   container.appendChild(incorrectLetterElement)
 
-  // Almacena las letras incorrectas
+  // Almacenar las letras incorrectas
   const incorrectLetters = []
 
   // Función para actualizar el contenido de la palabra con imágenes
@@ -98,7 +98,7 @@ const createFindGame = (container) => {
           img.alt = letterData.name
           letterElement.appendChild(img)
 
-          // Añade la letra debajo de la imagen
+          // Añadir la letra debajo de la imagen
           const letterText = document.createElement('div')
           letterText.className = 'letter-text'
           letterText.textContent = letter
@@ -110,13 +110,13 @@ const createFindGame = (container) => {
     })
   }
 
-  // Inicializa la visualización de la palabra
+  // Inicializar la visualización de la palabra
   updateWordDisplay()
 
-  // Crea el input para que el usuario introduzca la palabra
+  // Crear el input para que el usuario introduzca la palabra
   const inputField = document.createElement('input')
   inputField.type = 'text'
-  inputField.placeholder = 'Guess a letter'
+  inputField.placeholder = 'Introduce la palabra'
   inputField.maxLength = 1 // Limita a una letra
   container.appendChild(inputField)
 
@@ -125,7 +125,7 @@ const createFindGame = (container) => {
     return !blankSpaces.includes('_')
   }
 
-  // Verifica si es correcto
+  // Verificar si es correcto
   inputField.addEventListener('input', () => {
     const userInput = inputField.value.toLowerCase()
 
@@ -150,16 +150,16 @@ const createFindGame = (container) => {
       updateWordDisplay()
 
       if (isWordComplete()) {
-        // Deshabilita el input cuando la palabra esté completa
+        // Deshabilitar el input cuando la palabra esté completa
         inputField.disabled = true
         messageElement.textContent = '¡Bien hecho!'
       }
     }
 
-    inputField.value = '' // Limpia el campo de entrada
+    inputField.value = '' // Limpiar el campo de entrada
   })
 
-  // Crea un botón para pasar a la siguiente palabra
+  // Crear un botón para pasar a la siguiente palabra
   const nextButton = document.createElement('button')
   nextButton.textContent = 'Next Word'
   container.appendChild(nextButton)
@@ -169,18 +169,18 @@ const createFindGame = (container) => {
   })
 }
 
-// Inicializa el juego
+// Inicializar el juego
 export const findGame = () => {
-  // Toma el contenedor con ID "find-game"
+  // Tomar el contenedor con ID "find-game"
   const hangmanGameContainer = document.getElementById('find-game')
 
-  // Verifica si el contenedor existe
+  // Verificar si el contenedor existe
   if (!hangmanGameContainer) {
     console.error('No se encontró el contenedor con ID "find-game".')
     return
   }
 
-  // Inicia el juego
+  // Iniciar el juego
   createFindGame(hangmanGameContainer)
 }
 

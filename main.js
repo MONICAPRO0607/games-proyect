@@ -15,3 +15,16 @@ Cards();
 Games();
 Contact();
 Footer();
+
+// Código para mostrar/ocultar la flecha "volver arriba"
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopButton = document.querySelector('.back-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      backToTopButton.style.display = 'block';
+    } else {
+      backToTopButton.style.display = 'none';
+    }
+  });
+});

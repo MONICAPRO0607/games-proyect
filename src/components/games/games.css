@@ -14,6 +14,57 @@ button {
   font-size: x-large;
 }
 
+button:not(:hover) {
+  opacity: .7;
+  transform: scale(.85);
+} 
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.button-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.button-text {
+  padding: 10px;
+  font-size: 25px;
+  color: black;
+  text-align: center;
+  background-color: #f2e2d2;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 @media only screen and (max-width: 750px) {
   button {
     width: 200px;

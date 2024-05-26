@@ -9,6 +9,7 @@ export const memoryGame = () => {
     return
   }
 
+  // Array con las imágenes de las letras
   const cardsData = [
     { name: 'a', image: 'public/assets/a.png' },
     { name: 'b', image: 'public/assets/b.png' },
@@ -43,7 +44,7 @@ export const memoryGame = () => {
   const createNewGame = () => {
     memoryGameContainer.innerHTML = '' // Limpiar el contenedor
 
-    const deck = [] // Baraja para el juego actual
+    const deck = [] // Barajar para el juego actual
     const selectedPairs = new Set() // Pares de cartas seleccionados
 
     let gridCards = 8

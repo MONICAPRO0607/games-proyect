@@ -36,7 +36,7 @@
 
 .letter-text {
   position: absolute;
-  bottom: -25px; /* Ajusta esta distancia según sea necesario */
+  bottom: -25px; 
   font-size: 18px;
 }
 
