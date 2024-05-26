@@ -1,10 +1,9 @@
-/* memory.css */
 #memory-game {
   display: grid;
-  grid-template-columns: repeat(4, 100px); /* 4 columnas de 100px de ancho */
-  grid-template-rows: repeat(4, 1fr); /* 4 filas de igual tamaño */
-  justify-content: center; /* Centrar el contenido horizontalmente */
-  gap: 10px; /* Espacio entre las celdas del grid */
+  grid-template-columns: repeat(4, 100px); 
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: center;
+  gap: 10px;
 }
 .memory-card {
   width: 100px;
@@ -21,9 +20,9 @@
   transition: transform 0.6s;
   transform: rotateY(180deg);
   background-image: url('../../../../public/assets/confetti-doodles.png');
-  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el área */
-  background-position: center; /* Centra la imagen dentro del contenedor */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
   border-radius: 6px;
 }
 

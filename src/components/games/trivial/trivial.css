@@ -1,9 +1,6 @@
-/* Estilo para el contenedor del juego */
 #trivial-game {
   width: 100%;
 }
-
-/* Estilo para las preguntas */
 
 .questionParagraph {
   margin: 20px 0;
@@ -15,14 +12,12 @@
   text-align: center;
 }
 
-/* Estilo para el grid de opciones */
 .options-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
-/* Estilo para cada opción */
 .option {
   padding: 10px;
   background-color: #f0f0f0;
@@ -36,22 +31,18 @@
   flex-direction: column;
 }
 
-/* Estilo para las opciones cuando se coloca el cursor sobre ellas */
 .option:hover {
   background-color: #e0e0e0;
 }
 
-/* Estilo para las respuestas correctas */
 .option.correct {
   background-color: #a8e6cf;
 }
 
-/* Estilo para las respuestas incorrectas */
 .option.incorrect {
   background-color: #f7cac9;
 }
 
-/* Deshabilitar clic en las opciones hermanas de una respuesta correcta */
 .disabled {
   pointer-events: none;
   opacity: 0.5;
