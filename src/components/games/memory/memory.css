@@ -4,6 +4,7 @@
   grid-template-rows: repeat(4, 1fr);
   justify-content: center;
   gap: 10px;
+  padding-bottom: 20px;
 }
 .memory-card {
   width: 100px;

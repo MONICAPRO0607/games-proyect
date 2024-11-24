@@ -69,6 +69,7 @@ export const games = () => {
     memoryGame.classList.remove('hidden');
     trivialGame.classList.add('hidden');
     findGame.classList.add('hidden');
+    memoryHeader.scrollIntoView({ behavior: 'smooth' });
   });
 
   foundButton.addEventListener('click', function () {
@@ -76,6 +77,7 @@ export const games = () => {
     memoryHeader.classList.add('hidden');
     memoryGame.classList.add('hidden');
     trivialGame.classList.add('hidden');
+    findGame.scrollIntoView({ behavior: 'smooth' });
   });
 
   trivialButton.addEventListener('click', function () {
@@ -83,6 +85,7 @@ export const games = () => {
     memoryHeader.classList.add('hidden');
     memoryGame.classList.add('hidden');
     findGame.classList.add('hidden');
+    trivialGame.scrollIntoView({ behavior: 'smooth' });
   });
 
   main.appendChild(gamesSection);
